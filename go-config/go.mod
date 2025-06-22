@@ -1,4 +1,4 @@
-module go-config
+module github.com/devkhatri523/ecom-app/go-config
 
 go 1.24
 
