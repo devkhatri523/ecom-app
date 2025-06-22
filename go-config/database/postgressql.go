@@ -3,8 +3,9 @@ package database
 import (
 	"database/sql"
 	"fmt"
-	"go-config/config"
 	"time"
+
+	"github.com/devkhatri523/ecom-app/go-config/config"
 )
 
 type PostgresDatabase struct {
