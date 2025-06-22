@@ -1,0 +1,5 @@
+
+db.postgressql.connMaxLifetime =50
+2
+3
+4
