@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/devkhatri523/ecom-app/go-config/utils"
+	"github.com/devkhatri523/ecom-app/go-config/v2/utils"
 )
 
 type Options struct {

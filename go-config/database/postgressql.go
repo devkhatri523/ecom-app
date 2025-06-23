@@ -3,7 +3,7 @@ package database
 import (
 	"database/sql"
 	"fmt"
-	"github.com/devkhatri523/ecom-app/go-config/config"
+	"github.com/devkhatri523/ecom-app/go-config/v2/config"
 	_ "github.com/lib/pq"
 	"time"
 )
