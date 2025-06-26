@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; }
+        .header { text-align: center; }
+        .order-details, .customer-details, .products { margin-bottom: 20px; }
+        .products table { width: 100%; border-collapse: collapse; }
+        .products th, .products td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        .total { font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Order Confirmation</h1>
+    </div>
+    <div class="order-details">
+        <h2>Order Details</h2>
+        <p>Order Reference: {{.OrderReference}}</p>
+        <p>Payment Method: {{.PaymentMethod}}</p>
+        <p>Total Amount: ${{printf "%.2f" .TotalAmount}}</p>
+    </div>
+    <div class="customer-details">
+        <h2>Customer Details</h2>
+        <p>Name: {{.CustomerResponse.FirstName}} {{.CustomerResponse.LastName}}</p>
+        <p>Email: {{.CustomerResponse.Email}}</p>
+    </div>
+    <div class="products">
+        <h2>Products</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{range .Products}}
+            <tr>
+                <td>{{.ProductId}}</td>
+                <td>{{.Name}}</td>
+                <td>{{.Description}}</td>
+                <td>${{printf "%.2f" .Price}}</td>
+                <td>{{.Quantity}}</td>
+                <td>${{printf "%.2f" (mul .Price .Quantity)}}</td>
+            </tr>
+            {{end}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
