@@ -11,7 +11,7 @@ type PaymentServiceImpl struct {
 	paymentRepositoty repo.PaymentRepository
 }
 
-func NewCustomerServiceImpl(paymentRepository repo.PaymentRepository) PaymentService {
+func NewPaymentServiceImpl(paymentRepository repo.PaymentRepository) PaymentService {
 	return &PaymentServiceImpl{
 		paymentRepositoty: paymentRepository,
 	}

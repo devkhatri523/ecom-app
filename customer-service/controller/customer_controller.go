@@ -92,7 +92,7 @@ func (c *CustomerController) UpdateCustomer(ctx *gin.Context) {
 	respon := response.Response{
 		Code:   http.StatusOK,
 		Status: "success",
-		Data:   fmt.Sprintf("Customer with id :%s updated succssfully", customerId),
+		Data:   fmt.Sprintf("Customer with id :%d updated succssfully", customerId),
 	}
 	ctx.JSON(http.StatusOK, respon)
 }

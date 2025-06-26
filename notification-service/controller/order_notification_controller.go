@@ -12,8 +12,8 @@ type OrderNotificationController struct {
 	service service.EmailService
 }
 
-func NewOrderNotificationController(service service.EmailService) *NotificationController {
-	return &NotificationController{service: service}
+func NewOrderNotificationController(service service.EmailService) *OrderNotificationController {
+	return &OrderNotificationController{service: service}
 }
 
 func (controller *OrderNotificationController) SendOderConfirmationEmail(ctx *gin.Context) {

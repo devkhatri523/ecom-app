@@ -11,3 +11,17 @@ type CustomerAddress struct {
 	HouseNumber string `json:"house_number" validate:"required"`
 	ZipCode     string `json:"zip_code" validate:"required"`
 }
+
+type CustomerUpdateRequest struct {
+	Id        int64           `json:"id"`
+	FirstName string          `json:"first_name"`
+	LastName  string          `json:"last_name"`
+	Email     string          `json:"email"`
+	Address   CustomerAddress `json:"address"`
+}
+
+type CustomerUpdateAddress struct {
+	Street      string `json:"street"`
+	HouseNumber string `json:"house_number"`
+	ZipCode     string `json:"zip_code"`
+}

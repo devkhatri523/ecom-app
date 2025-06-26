@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ecom-app.iml" filepath="$PROJECT_DIR$/.idea/ecom-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/go-service.iml" filepath="$PROJECT_DIR$/go-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notification-service.iml" filepath="$PROJECT_DIR$/notification-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-service.iml" filepath="$PROJECT_DIR$/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment-service.iml" filepath="$PROJECT_DIR$/payment-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-service.iml" filepath="$PROJECT_DIR$/product-service.iml" />
     </modules>
   </component>
 </project>

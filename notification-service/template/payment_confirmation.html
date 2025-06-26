@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: auto; padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 8px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .details { margin-bottom: 15px; }
+        .label { font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Payment Confirmation</h1>
+        <p>Thank you for your payment!</p>
+    </div>
+
+    <div class="details">
+        <p><span class="label">Order Reference:</span> {{.OrderReference}}</p>
+        <p><span class="label">Amount Paid:</span> ${{printf "%.2f" .Amount}}</p>
+        <p><span class="label">Payment Method:</span> {{.PaymentMethod}}</p>
+    </div>
+
+    <div class="details">
+        <h2>Customer Information</h2>
+        <p><span class="label">Name:</span> {{.CustomerFirstName}} {{.CustomerLastName}}</p>
+        <p><span class="label">Email:</span> {{.CustomerEmail}}</p>
+    </div>
+</div>
+</body>
+</html>

@@ -21,14 +21,14 @@
     </div>
     <div class="order-details">
         <h2>Order Details</h2>
-        <p>Order Reference: {{.OrderReference}}</p>
+        <p>Order Reference: {{.OrderReferenceNumber}}</p>
         <p>Payment Method: {{.PaymentMethod}}</p>
         <p>Total Amount: ${{printf "%.2f" .TotalAmount}}</p>
     </div>
     <div class="customer-details">
         <h2>Customer Details</h2>
-        <p>Name: {{.CustomerResponse.FirstName}} {{.CustomerResponse.LastName}}</p>
-        <p>Email: {{.CustomerResponse.Email}}</p>
+        <p>Name: {{.Customer.FirstName}} {{.Customer.LastName}}</p>
+        <p>Email: {{.Customer.Email}}</p>
     </div>
     <div class="products">
         <h2>Products</h2>

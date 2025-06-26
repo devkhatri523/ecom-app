@@ -1,6 +1,6 @@
 package response
 
-type CreateCustomerResponse struct {
+type CustomerResponse struct {
 	CustomerID string          `json:"customer_id"`
 	FirstName  string          `json:"first_name"`
 	LastName   string          `json:"last_name"`

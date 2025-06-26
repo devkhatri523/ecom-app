@@ -34,9 +34,10 @@ func (c CustomerServiceImpl) CreateCustomer(customerRequest request.CreateCustom
 		return response.CustomerResponse{}, err
 	}
 	customerResponse := response.CustomerResponse{
-		FirstName: res.FirstName,
-		LastName:  res.LastName,
-		Email:     res.Email,
+		CustomerID: strconv.FormatInt(res.Id, 10),
+		FirstName:  res.FirstName,
+		LastName:   res.LastName,
+		Email:      res.Email,
 		Address: response.CustomerAddress{
 			Street:      res.Address.Street,
 			HouseNumber: res.Address.HouseNumber,
@@ -55,9 +56,10 @@ func (c CustomerServiceImpl) FindAllCustomer() ([]response.CustomerResponse, err
 	}
 	for _, value := range res {
 		customer := response.CustomerResponse{
-			FirstName: value.FirstName,
-			LastName:  value.LastName,
-			Email:     value.Email,
+			CustomerID: strconv.FormatInt(value.Id, 10),
+			FirstName:  value.FirstName,
+			LastName:   value.LastName,
+			Email:      value.Email,
 			Address: response.CustomerAddress{
 				Street:      value.Address.Street,
 				HouseNumber: value.Address.HouseNumber,
@@ -102,9 +104,10 @@ func (c CustomerServiceImpl) FindByID(customerId int64) (response.CustomerRespon
 		return response.CustomerResponse{}, err
 	}
 	res := response.CustomerResponse{
-		FirstName: result.FirstName,
-		LastName:  result.LastName,
-		Email:     result.Email,
+		CustomerID: strconv.FormatInt(result.Id, 10),
+		FirstName:  result.FirstName,
+		LastName:   result.LastName,
+		Email:      result.Email,
 		Address: response.CustomerAddress{
 			Street:      result.Address.Street,
 			HouseNumber: result.Address.HouseNumber,
