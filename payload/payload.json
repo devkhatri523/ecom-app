@@ -1,0 +1,43 @@
+/// product json
+
+{
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with USB receiver",
+    "availableQuantity": 100,
+    "price": 29.99,
+    "categoryId": 11
+  }
+
+  //
+  order json
+  {
+  "id": 101,
+  "orderReferenceId": "ORD-20250627-XYZ123",
+  "amount": 249.99,
+  "paymentMethod": 2,
+  "customerId": "6",
+  "purchaseProducts": [
+    {
+      "productId": 24,
+      "quantity": 2
+    }
+  ]
+}
+
+
+// customer json
+
+{
+  "first_name": "Dev",
+  "last_name": "DEv",
+  "email": "dev.doe@example.com",
+  "address": {
+    "street": "Main Street",
+    "house_number": "123A",
+    "zip_code": "12345"
+  }
+}
+
+
+
+

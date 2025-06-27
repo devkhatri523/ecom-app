@@ -1,6 +1,6 @@
 package request
 
-import "payment-service/enum"
+import "order-service/enum"
 
 type PaymentRequest struct {
 	Amount           float64            `json:"amount"`
